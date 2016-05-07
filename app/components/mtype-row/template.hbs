@@ -1,0 +1,19 @@
+  <form {{action "onSubmit" on="submit"}} class="ui form">
+    <div class="five fields">
+      <div class="field">
+        {{input value=model.label placeholder="Label"}}
+      </div>
+      <div class="field">
+        {{input value=model.unit placeholder="Unit"}}
+      </div>
+      <div class="field">
+        {{input value=model.min placeholder="Min value"}}
+      </div>
+      <div class="field">
+        {{input value=model.max placeholder="Max value"}}
+      </div>
+      <div class="field">
+        <input type="submit" value="{{buttonLabel}}" class="ui {{if canPushButton "" "disabled"}} {{if model.hasDirtyAttributes "red"}} button ">
+      </div>
+    </div>
+  </form>

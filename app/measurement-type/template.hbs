@@ -1,0 +1,12 @@
+{{outlet}}
+
+<div class="ui container">
+  <h2>New Measurement Type</h2>
+  {{mtype-row model=new onSubmit=(action "addMeasurementType") buttonLabel="Add" canPushButton=canAddNewType}}
+
+  <h2>Existing types</h2>
+  {{#each model as |mtype|}}
+    {{mtype-row model=mtype onSubmit=(action "save") buttonLabel="Save" canPushButton=true}}
+    <div class="ui divider"></div>
+  {{/each}}
+</div>

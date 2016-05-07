@@ -1,0 +1,7 @@
+<div class="ui container">
+  <h1>Chart for {{moment-format today "dddd MMMM Do YYYY"}}</h1>
+  <div {{action "addValue"}} class="ui button">Add value</div>
+
+  {{ember-chart type="line" data=chartData2 height=600 width=800}}
+</div>
+{{outlet}}

@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('measurement-type');
+  this.route('calendar');
 });
 
 export default Router;
